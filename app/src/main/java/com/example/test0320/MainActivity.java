@@ -31,37 +31,37 @@ public class MainActivity extends AppCompatActivity {
         w = findViewById(R.id.ed_weight);
     }
 
-    public void show(View view) {
-
-        ImageView view1= (ImageView) findViewById(R.id.iv_pic);
-
-
-        double h_value = Double.parseDouble(h.getText().toString());
-        double w_value = Double.parseDouble(w.getText().toString());
-        double bmi = w_value / (h_value /100.0 * h_value / 100.0);
-
-        DecimalFormat df = new DecimalFormat("#.#");
-
-        String msg;
-        if(bmi<18.5){
-            msg="體重過輕";
-            Toast.makeText(this, "體重過輕", Toast.LENGTH_LONG).show();
-            view1.setImageResource(R.drawable.b2);
-        }else if(bmi>24){
-            msg="體重過重";
-            Toast.makeText(this, "體重過重", Toast.LENGTH_SHORT).show();
-            view1.setImageResource(R.drawable.b1);
-        }else{
-            msg="體重正常";
-            Toast.makeText(this, "體重正常", Toast.LENGTH_SHORT).show();
-            view1.setImageResource(R.drawable.b3);
-        }
-
-        TextView b =findViewById(R.id.tv_showbmi);
-        b.setText(a.getText().toString()+",你的BMI值為"+df.format(bmi)+msg);
-
-
-    }
+//    public void show(View view) {
+//
+//        ImageView view1= (ImageView) findViewById(R.id.iv_pic);
+//
+//
+//        double h_value = Double.parseDouble(h.getText().toString());
+//        double w_value = Double.parseDouble(w.getText().toString());
+//        double bmi = w_value / (h_value /100.0 * h_value / 100.0);
+//
+//        DecimalFormat df = new DecimalFormat("#.#");
+//
+//        String msg;
+//        if(bmi<18.5){
+//            msg="體重過輕";
+//            Toast.makeText(this, "體重過輕", Toast.LENGTH_LONG).show();
+//            view1.setImageResource(R.drawable.b2);
+//        }else if(bmi>24){
+//            msg="體重過重";
+//            Toast.makeText(this, "體重過重", Toast.LENGTH_SHORT).show();
+//            view1.setImageResource(R.drawable.b1);
+//        }else{
+//            msg="體重正常";
+//            Toast.makeText(this, "體重正常", Toast.LENGTH_SHORT).show();
+//            view1.setImageResource(R.drawable.b3);
+//        }
+//
+//        TextView b =findViewById(R.id.tv_showbmi);
+//        b.setText(a.getText().toString()+",你的BMI值為"+df.format(bmi)+msg);
+//
+//
+//    }
 
     public void nextPage(View view) {
         Bundle bundle = new Bundle();
